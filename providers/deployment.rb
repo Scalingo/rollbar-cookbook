@@ -33,7 +33,7 @@ action :notify do
   end
 
   payload = {
-    "access_token" => new_resource.access_token,
+    "access_token" => new_resource.token,
     "environment" => new_resource.environment,
     "local_username" => new_resource.user,
     "revision" => revision
