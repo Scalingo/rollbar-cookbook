@@ -34,7 +34,7 @@ action :notify do
 
   payload = {
     "access_token" => new_resource.token,
-    "environment" => new_resource.environment,
+    "environment" => new_resource.env,
     "local_username" => new_resource.user,
     "revision" => revision
   }
