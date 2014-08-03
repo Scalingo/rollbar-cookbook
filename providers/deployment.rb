@@ -42,7 +42,12 @@ action :notify do
   payload["rollbar_username"] = new_resource.comment if new_resource.rollbar_username
 
   uri = URI(node['rollbar']['endpoint'])
-  res = Net::HTTP.post_form(uri, payload)
+  res = nil
+  Net::HTTP.start uri.host, uri.port, use_ssl: uri.scheme == "https" do |http|
+    req = Net::HTTP::Post.new uri.request_uri
+    req.form_data = payload
+    res = http.request req
+  end
 
   if res.code != 200
     body = res.body.length != 0 ? res.body : "<no body>"
