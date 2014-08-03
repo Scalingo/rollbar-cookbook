@@ -35,7 +35,7 @@ action :notify do
   payload = {
     "access_token" => new_resource.token,
     "environment" => new_resource.env,
-    "local_username" => new_resource.user,
+    "local_username" => new_resource.local_username,
     "revision" => revision
   }
   payload["comment"] = new_resource.comment if new_resource.comment
