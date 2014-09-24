@@ -30,7 +30,7 @@ end
 Then in anotherhe resource, which actually deploy your app/service/etc,
 you can trigger the notification.
 
-```
+```ruby
 resource name do
     notifies :notify, "rollbar_deployment[deploy_path]", :immediately
 end
