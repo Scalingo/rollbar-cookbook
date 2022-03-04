@@ -26,7 +26,7 @@ action :notify do
     cwd = Dir.getwd
 
     Dir.chdir path
-    revision=`git log -n 1 --pretty=format:"%H"`
+    revision = `git log -n 1 --pretty=format:"%H"`
     Dir.chdir cwd
   else
     raise "A revision or a path should be provided"
@@ -52,6 +52,5 @@ action :notify do
   if res.code != "200"
     body = res.body.length != 0 ? res.body : "<no body>"
     Chef::Log.error("Invalid status code from rollbar #{res.code}: #{body}")
-    raise "Invalid status code from rollbar #{res.code}"
   end
 end
