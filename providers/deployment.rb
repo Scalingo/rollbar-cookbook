@@ -2,12 +2,13 @@
 # Cookbook Name:: rollbar
 # LWRP: deployment
 #
-# Notify deployment to rollbar
+# Notify deployment to Rollbar
 #
-# Copypright 2014, Appsdeck
+# Copyright 2022, Scalingo
 #
-# License BSD version 3
+# License: BSD-3 License
 #
+
 require 'uri'
 require 'net/http'
 

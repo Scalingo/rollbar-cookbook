@@ -3,9 +3,9 @@
 #
 # Notify deployment to Rollbar
 #
-# Copyright 2014, Appsdeck
-# 
-# License: BSD version 3
+# Copyright 2022, Scalingo
+#
+# License: BSD-3 License
 #
 
 actions [:notify, :nothing]
