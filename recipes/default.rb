@@ -2,7 +2,7 @@
 # Cookbook Name:: rollbar
 # Recipe:: default
 #
-# Copyright 2014, Appsdeck
+# Copyright 2022, Scalingo
 #
-# BSD-3 License
+# License: BSD-3 License
 #
