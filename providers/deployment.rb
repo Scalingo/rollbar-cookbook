@@ -27,7 +27,7 @@ action :notify do
     cwd = Dir.getwd
 
     Dir.chdir path
-    revision = `git log -n 1 --pretty=format:"%H"`
+    revision = `git --no-pager log -n 1 --pretty=format:"%H"`
     Dir.chdir cwd
   else
     raise "A revision or a path should be provided"
