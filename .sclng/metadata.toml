@@ -1,0 +1,8 @@
+dependencies = []
+description = "Cookbook used to send kitchen errors to rollbar"
+destination_server = []
+flags = ["global"]
+languages = ["ruby"]
+owner = "brandon@scalingo.com"
+team = "SRE"
+version = "1.1.0"
