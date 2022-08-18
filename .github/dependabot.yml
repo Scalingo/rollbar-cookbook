@@ -1,0 +1,13 @@
+version: 2
+updates:
+  - package-ecosystem: "bundler"
+    directory: "/"
+    allow:
+      - dependency-type: "all"
+    versioning-strategy: lockfile-only
+    insecure-external-code-execution: allow
+    open-pull-requests-limit: 10
+    schedule:
+      interval: "monthly"
+    reviewers:
+      - "brandon-welsch"
